@@ -1,5 +1,8 @@
-<div>
-  <div *ngFor="let movie of movies">
-    <h3>{{ movie.title }}</h3>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let movie of movies">
+      <app-movie-list-item [id]="movie.id" [name]="movie.title" [year]="movie.year" [imageUrl]="movie.coverUrl" [description]="movie.description">
+      </app-movie-list-item>
+    </div>
   </div>
 </div>
