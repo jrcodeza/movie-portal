@@ -1,3 +1,24 @@
-<p>
-  new-movie works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="movieName">Name</label>
+    <input type="text" class="form-control" name="title" id="movieName" [(ngModel)]="movieToBeCreated.title" required>
+  </div>
+  <div class="form-group">
+    <label for="movieDescription">Description</label>
+    <input type="text" class="form-control" name="description" id="movieDescription" [(ngModel)]="movieToBeCreated.description">
+  </div>
+  <div class="form-group">
+    <label for="movieYear">Year</label>
+    <input type="number" class="form-control" name="year" id="movieYear" [(ngModel)]="movieToBeCreated.year" required>
+  </div>
+  <div class="form-group">
+    <label for="movieGenre">Genre</label>
+    <select id="movieGenre" name="genre" [(ngModel)]="movieToBeCreated.genreId">
+      <option *ngFor="let genre of availableGenres" [ngValue]="genre.id" [title]="genre.description">{{genre.name}}</option>
+    </select>
+  </div>
+  <button (click)="saveMovie()">Save movie</button>
+</form>
+<div>
+  <span *ngFor="let movie of allMovies">{{movie.title}},&nbsp;</span>
+</div>

@@ -1,13 +1,12 @@
-import {Genre} from './genre';
-
 export interface Movie {
 
-  id: number;
+  id?: number;
   title:  string;
   description?: string;
-  genre: Genre;
+  genreName?: string;
+  genreId: string;
   year: number;
-  duration: number;
-  coverUrl: string;
+  duration?: number;
+  coverUrl?: string;
 
 }

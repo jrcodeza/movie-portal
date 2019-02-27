@@ -7,20 +7,26 @@ import {MovieService} from './service/movie.service';
 import {AppRoutingModule} from './app-routing.module';
 import {NewMovieComponent} from './component/new-movie/new-movie.component';
 import {MovieListItemComponent} from './component/movie-list-item/movie-list-item.component';
+import {FormsModule} from '@angular/forms';
+import {GenreService} from './service/genre.service';
+import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
     NewMovieComponent,
-    MovieListItemComponent
+    MovieListItemComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    MovieService
+    MovieService,
+    GenreService
   ],
   bootstrap: [AppComponent]
 })
