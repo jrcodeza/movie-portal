@@ -8,7 +8,7 @@ import sk.portal.movie.model.Movie;
 import sk.portal.movie.repository.MovieRepository;
 
 @RestController
-@RequestMapping("/movies")
+@RequestMapping("/api/movies")
 public class MoviesResource {
 
 	private final MovieRepository movieRepository;

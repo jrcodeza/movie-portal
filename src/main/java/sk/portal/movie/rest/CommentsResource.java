@@ -13,7 +13,7 @@ import sk.portal.movie.model.MovieComment;
 import sk.portal.movie.repository.MovieRepository;
 
 @RestController
-@RequestMapping("/movies/{movieId}")
+@RequestMapping("/api/movies/{movieId}")
 public class CommentsResource {
 
 	private final MovieRepository movieRepository;
