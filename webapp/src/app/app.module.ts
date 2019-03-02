@@ -9,7 +9,8 @@ import {NewMovieComponent} from './component/new-movie/new-movie.component';
 import {MovieListItemComponent} from './component/movie-list-item/movie-list-item.component';
 import {FormsModule} from '@angular/forms';
 import {GenreService} from './service/genre.service';
-import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
+import {MovieDetailComponent} from './component/movie-detail/movie-detail.component';
+import {HighlightDirective} from './component/directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieDetailComponent } from './component/movie-detail/movie-detail.comp
     MovieListComponent,
     NewMovieComponent,
     MovieListItemComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
